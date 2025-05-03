@@ -1,0 +1,203 @@
+/* Genel stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Koyu arka plan */
+  color: #fff;
+  background-image: url('dark-sword.jpg'); /* Demon Slayer tarzı bir gece manzarası veya animasyon görseli ekleyebilirsiniz */
+  background-size: cover;
+  background-position: center;
+  transform: scale(1); /* Sayfa boyutunu 1:1 oranında tutuyoruz */
+  transform-origin: top left;
+  min-width: 100vw; /* Minimum genişlik 100vw olmalı */
+  min-height: 100vh; /* Minimum yükseklik 100vh olmalı */
+}
+
+/* Başlık */
+header {
+  background-color: rgba(255, 87, 34, 0.8); /* Neon turuncu şeffaf arka plan */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 32px; /* Başlık boyutunu büyüttüm */
+  margin-top: 50px; /* Üstten biraz boşluk */
+  text-transform: uppercase;
+}
+
+/* Hamburger Menü */
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  display: block;
+}
+
+/* Menü */
+.menu {
+  position: absolute;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #1b1b1b; /* Koyu arka plan */
+  transition: left 0.3s;
+  box-shadow: 2px 2px 15px rgba(255, 87, 34, 0.7);
+}
+
+.menu.open {
+  left: 0;
+}
+
+.menu ul {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  color: #ff5722; /* Neon turuncu */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Anime Listeleme Alanı */
+.anime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid alanı esnek olacak şekilde ayarlandı */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 90%; /* Maksimum genişlik %90 */
+  margin: 0 auto;
+}
+
+/* Anime Kartları */
+.anime {
+  background-color: rgba(50, 50, 50, 0.8); /* Koyu gri kartlar */
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%; /* Kart genişliği %100 olacak */
+}
+
+.anime:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 87, 34, 0.8); /* Hoverda neon turuncu gölge efekti */
+}
+
+.anime img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.anime h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ff5722; /* Neon turuncu */
+  text-transform: uppercase;
+}
+
+/* Detaylar için stil */
+.anime-details {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Siyah opak arka plan */
+  color: white;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.anime-details img {
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.anime-details p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Butonlar */
+button {
+  background-color: #ff5722; /* Neon turuncu buton */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e64a19; /* Daha koyu turuncu hover */
+}
+
+/* Sosyal medya paylaşım butonları */
+.social-share {
+  margin-top: 20px;
+}
+
+.social-share a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-share img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-share img:hover {
+  transform: scale(1.1); /* Paylaşım butonları hover efekti */
+}
+
+/* Instagram Butonu Sağ Alt */
+.instagram-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff5722; /* Neon turuncu */
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(255, 87, 34, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.instagram-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.instagram-button:hover img {
+  transform: scale(1.1); /* Instagram butonuna hover efekti */
+}
+
+.instagram-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.8); /* Hoverda daha parlak turuncu gölge */
+}
